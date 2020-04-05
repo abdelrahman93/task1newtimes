@@ -29,7 +29,7 @@ class NewsViewModel(private val newsRequest: NewsRequestInterface) :ViewModel() 
     }
      */
 
-    fun loadMuseums(){
+    fun loadNews(){
         _isViewLoading.postValue(true)
         newsRequest.retrieveNews(object:NetworkCallBack<NewsResults>{
 
