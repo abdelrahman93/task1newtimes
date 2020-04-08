@@ -2,4 +2,6 @@
     <string name="app_name">task1</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">dashboard</string>
+    <string name="title_offers">Offers</string>
+    <string name="title_data_usage">Data Usage</string>
 </resources>

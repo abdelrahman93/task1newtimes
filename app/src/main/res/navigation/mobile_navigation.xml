@@ -13,6 +13,8 @@
         <action
             android:id="@+id/action_navigation_home_to_navigation_dashboard"
             app:destination="@id/navigation_dashboard" />
+
+
     </fragment>
 
     <fragment
@@ -20,5 +22,13 @@
         android:name="com.example.myapplication.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_data_usage"
+        android:name="com.example.myapplication.ui.dashboard.DataUsageFragment"
+        android:label="@string/title_data_usage"
+        tools:layout="@layout/fragment_dashboard" />
+
+
 
 </navigation>

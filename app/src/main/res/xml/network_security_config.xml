@@ -2,5 +2,10 @@
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">api.nytimes.com</domain>
+        <domain includeSubdomains="true">www.script-tutorials.com</domain>
+        <domain includeSubdomains="true">www.imgbb.com</domain>
+
+
+
     </domain-config>
 </network-security-config>

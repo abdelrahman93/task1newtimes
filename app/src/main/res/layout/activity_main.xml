@@ -4,9 +4,10 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@color/colorWhite">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+    <com.comapny.task1.customViews.CustomBottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -29,5 +30,39 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/base_floating_button_shape"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/base_fab"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_home_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/base_fab"
+            android:layout_centerHorizontal="true"
+            android:text="Home"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10sp">
+
+
+        </TextView>
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
