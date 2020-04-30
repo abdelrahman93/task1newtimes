@@ -1,10 +1,9 @@
 package com.comapny.task1.models
 
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 
 
- data class NewsResults (
+data class NewsResults (
 
 
     @SerializedName("uri") val uri : String,

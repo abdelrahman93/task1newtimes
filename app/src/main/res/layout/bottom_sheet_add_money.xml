@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:layout_marginStart="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_close_black_24dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_close"
+        android:id="@+id/tv_title_add_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"
+        android:text="@string/addmoney"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_orange_cash_rules"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_add_money"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_orange_cash_rules"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_add_money_desc"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_orange_cash_rules"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_width="0dp"
+        android:text="@string/addmoney_desc"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_orange_cash_rules"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_add_money_limits"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_money_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:text="Please note that the maximum wallet balance is EGP 50,000 (30,000 for self-registered customers) The allowed number of deposit transactions are: 50 per day 250 per week 350 per month Accordingly please always ensure that your wallet has enough funds within the allowed ranges to ensure successful transactions"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_orange_cash_rules"/>
+    <CheckBox
+        android:id="@+id/cb_add_money_limits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_money_limits"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/i_agree"
+
+        />
+
+
+    <Button
+        android:id="@+id/btnSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="45dp"
+        android:background="@drawable/button_style_add_money"
+        android:text="@string/proceed"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/cb_add_money_limits"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

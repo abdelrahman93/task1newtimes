@@ -36,7 +36,7 @@ class HomeFragment : Fragment(), MainActivityInterface {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.activity_home, container, false)
-        rv_news= root.findViewById(R.id.rv_news)
+        rv_news = root.findViewById(R.id.rv_news)
         setupViewModel()
         initRecyclerView()
 
@@ -47,7 +47,7 @@ class HomeFragment : Fragment(), MainActivityInterface {
     private fun initRecyclerView() {
 
 
-        adapter = NewsAdapter(viewModel.news.value ?: emptyList(),this)
+        adapter = NewsAdapter(viewModel.news.value ?: emptyList(), this)
         rv_news.layoutManager = LinearLayoutManager(activity)
         rv_news.adapter = adapter
 
@@ -55,10 +55,11 @@ class HomeFragment : Fragment(), MainActivityInterface {
 
 
     private fun setupViewModel() {
-         val newsRequestInterface: NewsRequestInterface = NewsRequest()
+        val newsRequestInterface: NewsRequestInterface = NewsRequest()
         viewModel = ViewModelProvider(
             this,
-            ViewModelFactory(newsRequestInterface)).get(NewsViewModel::class.java)
+            ViewModelFactory(newsRequestInterface)
+        ).get(NewsViewModel::class.java)
 
         viewModel.news.observe(viewLifecycleOwner, renderNews)
 
@@ -85,14 +86,20 @@ class HomeFragment : Fragment(), MainActivityInterface {
         viewModel.loadNews()
     }
 
-    override fun navigateToNewsDetails(title: String, desc: String,by: String, date: String, url: String) {
+    override fun navigateToNewsDetails(
+        title: String,
+        desc: String,
+        by: String,
+        date: String,
+        url: String
+    ) {
 
-        val intent = Intent(activity,NewsDetailsActivity::class.java)
-        intent.putExtra("title",title)
-        intent.putExtra("desc",desc)
-        intent.putExtra("by",by)
-        intent.putExtra("date",date)
-        intent.putExtra("url",url)
+        val intent = Intent(activity, NewsDetailsActivity::class.java)
+        intent.putExtra("title", title)
+        intent.putExtra("desc", desc)
+        intent.putExtra("by", by)
+        intent.putExtra("date", date)
+        intent.putExtra("url", url)
         startActivity(intent)
     }
 

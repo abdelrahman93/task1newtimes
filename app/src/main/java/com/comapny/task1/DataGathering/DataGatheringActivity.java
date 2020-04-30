@@ -179,7 +179,8 @@ public class DataGatheringActivity extends AppCompatActivity  {
                         }
                     }
 
-                    if (fileChooserParams.getAcceptTypes().length == 0) {   //no `accept` parameter was specified, allow both photo and video
+                    if (fileChooserParams.getAcceptTypes().length == 0)
+                    {   //no `accept` parameter was specified, allow both photo and video
                         includePhoto = true;
                         includeVideo = true;
                     }
@@ -239,6 +240,13 @@ public class DataGatheringActivity extends AppCompatActivity  {
 
     //callback reporting if error occurs
     public class Callback extends WebViewClient {
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            super.onPageFinished(view, url);
+
+        }
+
         public void onReceivedError(WebView view, int errorCode, String description, String failingUrl){
             Toast.makeText(getApplicationContext(), "Failed loading app!", Toast.LENGTH_SHORT).show();
         }

@@ -4,4 +4,8 @@
     <string name="title_dashboard">dashboard</string>
     <string name="title_offers">Offers</string>
     <string name="title_data_usage">Data Usage</string>
+    <string name="addmoney">Add Money</string>
+    <string name="proceed">Proceed</string>
+    <string name="addmoney_desc">Bringing You Closer to What Matters While You Are Home</string>
+    <string name="i_agree">I Agree</string>
 </resources>
